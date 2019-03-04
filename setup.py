@@ -8,7 +8,7 @@ setup(
   author = 'Kunal Gupta',                   # Type in your name
   author_email = 'upanshug53@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/kunalgupta777/pycryptokg',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/kunalgupta777/cryptopy/archive/1.0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/kunalgupta777/pycryptokg/archive/0.1.tar.gz',    # I explain this later on
   keywords = ['python', 'cryptography', 'RSA', 'DES', 'Ciphers'],   # Keywords that define your package best
   install_requires=[  'numpy'
       ],
