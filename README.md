@@ -33,10 +33,33 @@ Here's a broad description of the cryptography techniques given
 ## How to use?
 Open a terminal and use
  ``` 
- pip install cryptopy
+ pip install pycryptokg
  ```
- You can use
+ In your Python script, you can use the library as:
+
  ```
- help(cryptopy) 
+ from pycryptokg import MonoalphabeticCrypto as MC
+ from pycryptokg import PolyalphabeticCrypto as PC
+ 
+ mc = MC()
+ pc = PC()Zhtwsl'[l {
+ 
  ```
- for documentation about the API's
+ To use the additive cipher
+ ```
+ cipher_text = mc.additive_cipher_encrypt("Sample Text",7)
+ print cipher_text
+ Zhtwsl'[l {
+ ```
+ You can decrypt using
+ ```
+ plain = mc.additive_cipher_decrypt(cipher_text, 7)
+ print plain
+ Sample Text
+ ```
+ 
+ For detailed information about the API's, use
+ ```
+ help(mc.additive_cipher_encrypt)
+ ```
+ 
