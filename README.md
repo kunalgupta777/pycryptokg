@@ -1,4 +1,7 @@
 # pycryptokg
+```bash
+pip install pycryptokg
+```
 A cryptography library for Python 2.7.
 Here's a broad description of the cryptography techniques given
 ## Symmetric Key  Cryptography Techniques ##
