@@ -1,5 +1,7 @@
+from __future__ import print_function
 import random
 import math
+
 
 class MonoalphabeticCrypto:
     default_key1 = None
@@ -41,23 +43,17 @@ class MonoalphabeticCrypto:
         return x
     
     def additive_cipher_encrypt(self, plain_text, key = default_key1 , N = 95):
-        cipher_text = []
-        for ch in plain_text:
-            cipher_ch=chr((ord(ch) - 32 + key)%N + 32)
-            cipher_text.append(cipher_ch)
+        cipher_text = [ chr((ord(ch)-32+key)%N + 32) for ch in plain_text]
         return "".join(cipher_text)
     
     def additive_cipher_decrypt(self, cipher_text, key = default_key1, N = 95):
-        plain_text = []
-        for ch in cipher_text:
-            plain_ch=chr((ord(ch) - 32 - key)%N + 32)
-            plain_text.append(plain_ch)
+        plain_text = [ chr((ord(ch)-32-key)%N+32) for ch in cipher_text]
         return "".join(plain_text)
     
     def multiplicative_cipher_encrypt(self, plain_text, key = default_key1, N = 95):
         key_inv = self.multiplicative_inverse(key, N)
         if key_inv==None:
-            print "Supplied Key doesn't have a multiplicative inverse"
+            print("Supplied Key doesn't have a multiplicative inverse")
             return
         cipher_text = []
         for ch in plain_text:

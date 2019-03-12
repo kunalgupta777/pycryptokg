@@ -1,3 +1,4 @@
+from __future__ import print_function
 import random, math, numpy
 
 class PolyalphabeticCrypto:
@@ -223,8 +224,9 @@ class PolyalphabeticCrypto:
         if key == None:
             key = self.generate_hill_key(N)
         elif self.check_key(key, N)==False:
-                print "Key is Not compatible for decryption!"
-                return 
+                print("Key is Not compatible for decryption!")
+                return
+                
         
         l = int(math.sqrt(len(key)))
         key_matrix = self.get_key_matrix(key)
@@ -265,12 +267,10 @@ class PolyalphabeticCrypto:
             
     def hill_cipher_decrypt(self, cipher_text, key, N = 95):
         if self.check_key(key, N)==False:
-            print "Invalid Key!"
+            print("Invalid Key!")
             return 
         l = int(math.sqrt(len(key)))
         key_matrix = self.get_key_matrix(key)
-        print "Key Matrix:"
-        print key_matrix
         blocks = []
         i = 0
         block = []
