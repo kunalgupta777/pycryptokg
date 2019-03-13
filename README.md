@@ -2,7 +2,7 @@
 ```bash
 pip install pycryptokg
 ```
-A cryptography library for Python 2.7.
+A cryptography library for Python ( both 2.7x and 3.x versions are supported. )
 Here's a broad description of the cryptography techniques given
 ## Symmetric Key  Cryptography Techniques ##
  - [x] 1 **Substitution ( each character is substituted with another, can be a different space than the plaintext )**
@@ -51,13 +51,13 @@ Open a terminal and use
  To use the additive cipher
  ```python
  cipher_text = mc.additive_cipher_encrypt("Sample Text",7)
- print cipher_text
+ print(cipher_text)
  Zhtwsl'[l {
  ```
  You can decrypt using
  ```python
  plain = mc.additive_cipher_decrypt(cipher_text, 7)
- print plain
+ print(plain)
  Sample Text
  ```
  
